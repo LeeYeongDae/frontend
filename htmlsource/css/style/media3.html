@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      body{
+        background: #ecf0f1;
+      }
+      .wrapper{
+        max-width: 60rem;
+        width: 100%;
+      }
+      .flexbg{
+        display: flex;
+      }
+      main{
+        justify-content: space-between;
+        background: white;
+        padding: 25px;
+        order: 2;
+      }
+      .leftside{
+        background: #3498db;
+        order:1;
+      }
+      .rightside{
+        background: #34495e;
+        order: 3;
+      }
+      @media screen and (max-width: 0px) {
+        body{
+          background: url(../../image/bg1.jpg) no-repeat fixed;
+          background-size: cover;
+        }
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, veniam omnis illum veritatis et sapiente minus, magni repellendus ipsa mollitia nihil culpa nemo id dicta cum nesciunt libero. Voluptas provident officiis autem veniam vitae totam optio magnam consequatur? Fugiat rem rerum, consequuntur suscipit quam eaque magni iusto dolor esse, labore soluta illum error dolores consectetur magnam similique recusandae, qui ipsum totam ratione. Odio, tempora praesentium dolorum eaque illo perferendis magnam molestiae distinctio excepturi suscipit necessitatibus, sapiente officiis quibusdam facere aliquam asperiores! Dolorem accusamus accusantium veritatis eligendi molestias dolore, quod voluptatum eaque a! Tenetur illo, porro laudantium ex est qui velit.
+        </p>
+      </main>
+      <aside class="leftside">
+        <p>You might have some lastest posts here on the left</p>
+      </aside>
+      <aside class="rightside">
+        <p>And some other widgets here on the right</p>
+      </aside>
+    </div>
+  </body>
+</html>
