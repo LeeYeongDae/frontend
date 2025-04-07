@@ -5,53 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      h2{
+      table {
+        border-collapse: collapse;
+        border: 2px solid black;
+        width: 800px;
+      }
+
+      td {
+        border: 1px solid gray;
         text-align: center;
       }
-      tr td:first-child{
+
+      h2 {
         text-align: center;
+      }
+      .left {
+        text-align: left;
+        padding: 10px;
+      }
+      .col {
+        width: 100px;
+      }
+      .col2 {
+        width: 400px;
+      }
+
+      tr td:first-child {
+        width: 200px;
       }
     </style>
   </head>
   <body>
-    <table border="1px" width="600">
+    <table>
       <tr>
         <td rowspan="3">
           <img src="" alt="" />
         </td>
         <td colspan="4">
-          <h2>이력서</h2>
+          <h2>이 력 서</h2>
         </td>
       </tr>
       <tr>
-        <td rowspan="2">성명</td>
-        <td colspan="2" rowspan="2">&nbsp;</td>
+        <td rowspan="2" class="col">성명</td>
+        <td colspan="2" rowspan="2">홍 길 동</td>
         <td>생년월일</td>
       </tr>
       <tr>
-        <td>&nbsp;</td>
+        <td>971106 - 1222415</td>
       </tr>
       <tr>
         <td>이메일</td>
-        <td colspan="4">&nbsp;</td>
+        <td colspan="4" class="left">hong123@gmail.com</td>
       </tr>
       <tr>
         <td>현주소</td>
-        <td colspan="4">&nbsp;</td>
+        <td colspan="4" class="left">서울시 종로구 종로1가</td>
       </tr>
       <tr>
         <td>연락처</td>
-        <td colspan="4">&nbsp;</td>
+        <td colspan="4" class="left">010-0000-0000</td>
       </tr>
       <tr>
         <td>기간</td>
-        <td colspan="2">학력사항</td>
+        <td colspan="2" class="col2">학력사항</td>
         <td colspan="2">비고</td>
       </tr>
       <tr>
-        <td>2000.12.01</td>
+        <td>2000.02.15</td>
         <td colspan="2">OO 대학교 졸업</td>
-        <td colspan="2">컴퓨터공학</td>
+        <td colspan="2" class="col">컴퓨터 전공</td>
       </tr>
     </table>
   </body>

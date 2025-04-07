@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Document</title>
+     </head>
+     <body>
+          <script>
+               // 숫자를 받아 양수 음수 체크, 숫자 아니면 Number()로 아님 출력
+               let input = prompt("숫자를 입력해주세요");
+               if(isNaN(input)){
+                    console.log("숫자가 아님");
+                    document.write("<h3>숫자가 아님<h3>");
+               }
+               else if(parseInt(input) < 0){
+                    console.log("음수");
+                    document.write("<h3>음수<h3>");
+               }
+               else{
+                    console.log("양수");
+                    document.write("<h3>양수<h3>");
+               }
+          </script>
+     </body>
+</html>

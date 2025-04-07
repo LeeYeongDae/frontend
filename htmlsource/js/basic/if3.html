@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Document</title>
+     </head>
+     <body>
+          <script>
+               // 국어 수학 영어 점수를 입력받아 평균점수에 맞는 학점 출력
+               let kor = Number(prompt("국어 점수를 입력해주세요"));
+               let mat = Number(prompt("수학 점수를 입력해주세요"));
+               let eng = Number(prompt("영어 점수를 입력해주세요"));
+
+               const avg = (kor + mat + eng) / 3;
+               console.log(avg);
+               switch (parseInt(avg/10)) {
+                    case 10:
+                    case 9:
+                         document.write("<h2>A</h2>");
+                         break;
+                    case 8:
+                         document.write("<h2>B</h2>");
+                         break;
+                    case 7:
+                         document.write("<h2>C</h2>");
+                         break;
+                    case 6:
+                         document.write("<h2>D</h2>");
+                         break;
+                         default:
+                              document.write("<h2>F</h2>");
+                         break;
+               }
+          </script>
+     </body>
+</html>

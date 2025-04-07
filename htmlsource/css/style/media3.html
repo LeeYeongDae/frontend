@@ -5,54 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      *{
+      /* 전체 여백 0 */
+      * {
+        box-sizing: border-box;
         padding: 0;
         margin: 0;
       }
-      body{
-        background: #ecf0f1;
+
+      /* body 배경색 : #ecf0f1 */
+      body {
+        background-color: #ecf0f1;
       }
-      .wrapper{
-        max-width: 60rem;
+
+      /* wrapper : max-width : 60rem, width:100% */
+      .wrapper {
         width: 100%;
+        max-width: 60rem;
+        margin: 2rem auto;
       }
-      .flexbg{
+
+      /* flexbg : flex 컨테이너 */
+      .flexbg {
         display: flex;
       }
-      main{
-        justify-content: space-between;
+
+      /* main : 배경색 흰색, 안쪽여백 25, order 2 */
+      .flexbg main {
         background: white;
         padding: 25px;
         order: 2;
       }
-      .leftside{
-        background: #3498db;
-        order:1;
+      /* left : 배경색 #3498db, order 1  */
+      .flexbg .sidebar {
+        padding: 25px;
+        width: 20%;
       }
-      .rightside{
+      .flexbg .left {
+        background: #3498db;
+        order: 1;
+      }
+      /* right : 배경색 #34495e, order 3  */
+      .flexbg .right {
         background: #34495e;
         order: 3;
       }
-      @media screen and (max-width: 0px) {
-        body{
-          background: url(../../image/bg1.jpg) no-repeat fixed;
-          background-size: cover;
+
+      /* 481~768 */
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          /* display: flex; */
+          flex-wrap: wrap;
+        }
+        .flexbg main {
+          width: 100%;
+          order: 1;
+        }
+        .flexbg .sidebar {
+          width: 50%;
+        }
+        .flexbg .left {
+          order: 2;
         }
       }
-     
+
+      /* 0~480 */
+      @media screen and (max-width: 480px) {
+        .flexbg .sidebar {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="wrapper flexbg">
       <main>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, veniam omnis illum veritatis et sapiente minus, magni repellendus ipsa mollitia nihil culpa nemo id dicta cum nesciunt libero. Voluptas provident officiis autem veniam vitae totam optio magnam consequatur? Fugiat rem rerum, consequuntur suscipit quam eaque magni iusto dolor esse, labore soluta illum error dolores consectetur magnam similique recusandae, qui ipsum totam ratione. Odio, tempora praesentium dolorum eaque illo perferendis magnam molestiae distinctio excepturi suscipit necessitatibus, sapiente officiis quibusdam facere aliquam asperiores! Dolorem accusamus accusantium veritatis eligendi molestias dolore, quod voluptatum eaque a! Tenetur illo, porro laudantium ex est qui velit.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus sapiente provident, nemo cumque quos
+          voluptates delectus est explicabo laudantium vel ea nam fugiat beatae dolor numquam assumenda magni asperiores
+          ut. Beatae doloribus id obcaecati excepturi ullam perferendis alias vero consectetur, quos deserunt ad aliquam
+          nulla, repellat eius assumenda voluptatem est dolor! Totam voluptas recusandae molestias magni quae
+          necessitatibus sint tempora consequuntur, corporis optio fugiat delectus sequi suscipit nulla consequatur
+          consectetur, possimus dolor ex qui ea? Et possimus laborum quasi beatae nemo! Veniam recusandae dicta sunt
+          deleniti quaerat quia dolor minus et. Obcaecati soluta voluptatibus itaque! Aliquid tempora quia placeat
+          voluptatum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus sapiente provident, nemo cumque quos
+          voluptates delectus est explicabo laudantium vel ea nam fugiat beatae dolor numquam assumenda magni asperiores
+          ut. Beatae doloribus id obcaecati excepturi ullam perferendis alias vero consectetur, quos deserunt ad aliquam
+          nulla, repellat eius assumenda voluptatem est dolor! Totam voluptas recusandae molestias magni quae
+          necessitatibus sint tempora consequuntur, corporis optio fugiat delectus sequi suscipit nulla consequatur
+          consectetur, possimus dolor ex qui ea? Et possimus laborum quasi beatae nemo! Veniam recusandae dicta sunt
+          deleniti quaerat quia dolor minus et. Obcaecati soluta voluptatibus itaque! Aliquid tempora quia placeat
+          voluptatum?
         </p>
       </main>
-      <aside class="leftside">
-        <p>You might have some lastest posts here on the left</p>
+      <aside class="sidebar left">
+        <p>You might have some latest posts here on the left</p>
       </aside>
-      <aside class="rightside">
+      <aside class="sidebar right">
         <p>And some other widgets here on the right</p>
       </aside>
     </div>
