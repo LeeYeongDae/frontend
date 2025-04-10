@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div * {
+        padding: 10px;
+        margin: 10px;
+      }
+      [readonly]{
+        background: gray;
+      }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+     rel="stylesheet" 
+     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+     crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div>
+      <h2>숫자 맞추기</h2>
+    </div>
+    <div>
+      컴퓨터가 생성한 숫자를 맞추는 게임.
+      숫자는 1~100
+    </div>
+    <div>
+        <label>
+        숫자
+        <input type="text" id="num1" name="num1" size="5" />
+        <button type="button">확인</button>
+      </label>
+    </div>
+    <div>
+      <label>
+        추측횟수
+        <input type="text" id="count" name="count" size="5" readonly />
+      </label>
+    </div>
+    <div>
+      <label>
+        힌트
+        <input type="text" id="hint" name="hint" readonly />
+      </label>
+    </div>
+    <script>
+     const random = parseInt(Math.random() * 100 + 1);
+
+      
+     
+     document.querySelector("button").addEventListener("click", ()=>{
+      const num1 = document.querySelector("#num1").value;
+
+      document.querySelector("#count").value++;
+      if(num1 > random){
+        document.querySelector("#hint").value = "추측값이 더 작습니다."
+      }
+      else if(num1 < random){
+        document.querySelector("#hint").value = "추측값이 더 큽니다."
+      }
+      else if(num1 == random){
+        document.querySelector("#hint").value = "정답입니다."
+      }
+     });
+    </script>
+  </body>
+</html>

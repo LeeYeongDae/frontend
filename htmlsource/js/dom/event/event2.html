@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="outside">
+      <tr>
+        <td id="t1">one</td>
+      </tr>
+      <tr>
+        <td id="t2">two</td>
+      </tr>
+    </table>
+    <script>
+      const t2 = document.getElementById("t2");
+      function modText(){
+        t2.textContent = t2.textContent == "two" ? "three":"two";
+      }
+      document.querySelector("#outside").addEventListener("click", modText);
+    </script>
+  </body>
+</html>

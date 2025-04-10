@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 onclick="alert('경고')">Header</h1>
+    <button type="button">클릭1</button>
+    <button type="button">클릭2</button>
+    <script>
+      //이벤트 : 사이트에서 방문자가 취하는 모든 행위, 마우스 드래그, 클릭, 더블클릭, 입력...
+      //이벤트 처리
+      // 1) 이벤트 핸들러 속성 이용
+      // 2) 이벤트 리스너 이용
+      //    - 이벤트 대상 찾기, 이벤트명 지정, 함수 연결
+      const btn1 = document.querySelector("button").addEventListener("click", () => console.log("버튼1 눌림"));
+      const btn2 = document.querySelector("body button:nth-child(3)").addEventListener("click", () => console.log("버튼2 눌림"));
+
+      const btns = document.querySelectorAll("button");
+
+      const say1 = () => alert("하이요");
+      const say2 = () => alert("하이요 님");
+
+      btns[0].addEventListener("click", say1);
+      btns[1].addEventListener("click", say2);
+    </script>
+  </body>
+</html>

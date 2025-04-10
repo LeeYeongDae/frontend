@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #p1 {
+        /*display: none; block*/
+        /*visibility: hidden; visible*/
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">This is america.</p>
+    <button type="button">숨김</button>
+    <button type="button">보임</button>
+    <script>
+      const btns = document.querySelectorAll("button");
+      const p1 = document.getElementById("p1");
+      function p1Hide(){
+        p1.style.visibility = "hidden";
+      }
+      function p1View(){
+        p1.style.visibility = "visible";
+      }
+
+      btns[0].addEventListener("click", p1Hide);
+      btns[1].addEventListener("click", p1View);
+    </script>
+  </body>
+</html>
